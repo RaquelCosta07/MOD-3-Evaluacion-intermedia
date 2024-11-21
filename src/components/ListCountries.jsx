@@ -1,8 +1,22 @@
-import React from 'react'
+import Country from "./Country"
+//implementar la logica para pintar todas las imagenes
 
-function ListCountries() {
+function ListCountries({countriesList}) {
+    // console.log(countriesList);
+
+    const countryItems = countriesList.map((countryItem) => {
+        // console.log(countryItem);
+        return <Country countryData={countryItem} key={countryItem.name.common} />
+        
+    })
+   
+
   return (
-    <div>ListCountries</div>
+    <section>
+        <ul>
+            {countryItems}
+        </ul>
+    </section>
   )
 }
 

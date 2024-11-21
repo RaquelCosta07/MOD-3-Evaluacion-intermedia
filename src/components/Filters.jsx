@@ -1,8 +1,16 @@
-import React from 'react'
+
 
 function Filters() {
+
+const handleChange= (ev) => {
+    console.log(ev.target.value)
+}
+
   return (
-    <div>Filters</div>
+    <form>
+        <label htmlFor="Search">Search: </label>
+        <input id="Search" type="text" onChange={handleChange} />
+    </form>
   )
 }
 
