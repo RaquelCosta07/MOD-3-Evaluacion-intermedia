@@ -4,10 +4,10 @@
 function Country({countryData}) {
   return (
     <li>
-        <img src={countryData.flag} alt={countryData.name.common + " flag"} />
+        <p>{countryData.flag} </p>
         <h3>{countryData.name.common}</h3>
-        <p>{countryData.capital}</p>
-        <p>{countryData.continents}</p>
+        <p>{countryData.capital[0]}</p>
+        <p>{countryData.continents[0]}</p>
     </li>
   )
 }
